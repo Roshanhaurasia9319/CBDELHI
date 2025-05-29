@@ -1,0 +1,93 @@
+.reply-card {
+  background: linear-gradient(145deg, #0c0c0c, #1b1b1b);
+  border: 2px solid rgba(255, 215, 0, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  /* max-width: 800px; */
+  width: 68vw;
+  margin: 60px auto;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.15), 0 0 40px rgba(0, 0, 0, 0.6);
+  color: #f8f8f8;
+  backdrop-filter: blur(6px);
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  transition: all 0.4s ease;
+}
+
+.reply-card:hover {
+  transform: perspective(1000px) rotateX(1deg) rotateY(1deg);
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.3), 0 0 50px rgba(0, 0, 0, 0.8);
+}
+
+.reply-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: gold;
+  font-weight: 600;
+}
+
+.reply-note {
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+  color: #ccc;
+}
+
+.required {
+  color: gold;
+}
+
+.reply-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.reply-input {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  padding: 12px 18px;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.reply-input::placeholder {
+  color: #aaa;
+}
+
+.reply-input:focus {
+  border-color: gold;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.reply-textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.checkbox-label {
+  font-size: 0.9rem;
+  color: #bbb;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.reply-button {
+  background: linear-gradient(45deg, gold, #b8860b);
+  color: black;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px gold;
+}
+
+.reply-button:hover {
+  background: linear-gradient(45deg, #ffd700, #d4af37);
+  box-shadow: 0 0 20px gold, 0 0 30px #b8860b;
+}

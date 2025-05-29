@@ -1,0 +1,223 @@
+.offer-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5px;
+
+  width: 80vw;
+  margin: 40px auto;
+  padding: 24px;
+
+  background: rgba(27, 26, 45, 0.5); /* deep royal overlay */
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 215, 0, 0.25); /* soft gold edge */
+  color: #f1f1f1;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.4),
+    0 0 4px rgba(255, 215, 0, 0.2);
+  
+  position: relative;
+  overflow: visible;
+  transition: all 0.4s ease;
+  animation: fadeInUp 0.6s ease-in-out;
+}
+
+.offer-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 14px 28px rgba(255, 215, 0, 0.25);
+}
+
+.offer-rank {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  background: linear-gradient(45deg, #d4af37, #ffd700);
+  color: #000;
+  font-weight: bold;
+  padding: 12px 12px;
+  border-radius: 50%;
+  font-size: 14px;
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.6);
+}
+
+.offer-left .offer-logo {
+  width: 90px;
+  height: auto;
+  border-radius: 10px;
+  background: white;
+  padding: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.offer-left .offer-logo:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+.offer-left img{
+  border-radius: 50%;
+}
+
+/* .offer-left  img{
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid #ffd700;
+  padding: 5px;
+  background: radial-gradient(circle, #fff8dc, #ffd700);
+  box-shadow:
+    0 4px 12px rgba(255, 215, 0, 0.4),
+    0 0 0 4px rgba(255, 255, 255, 0.1); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+} */
+
+
+.offer-middle {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  gap: 8px;
+}
+
+.offer-middle h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #ffeb3b;
+  font-weight: 700;
+  animation: slideIn 0.4s ease;
+}
+
+.offer-stars {
+  color: #ffd700;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  animation: pulse 1.8s infinite;
+}
+
+.offer-bonus {
+  color: #eee;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.user-ratings {
+  color: #aaa;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.highlight {
+  margin-top: 10px;
+  font-size: 0.92rem;
+  color: #f44336;
+  font-weight: 600;
+  background: #ffeaea;
+  padding: 4px 8px;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+.yesterday {
+  font-weight: bold;
+}
+
+.offer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  background: linear-gradient(to right, #512da8, #673ab7);
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(103, 58, 183, 0.3);
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.review-link {
+  color: #ffe082;
+  font-size: 0.95rem;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.review-link:hover {
+  color: #ffd54f;
+}
+
+.cta-btn {
+  background: linear-gradient(to right, #ff9800, #ffc107);
+  color: #000;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(255, 193, 7, 0.3);
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: linear-gradient(to right, #ffa726, #ffd54f);
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .offer-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .offer-middle {
+    width: 100%;
+    align-items: center;
+  }
+
+  .offer-right {
+    align-items: center;
+  }
+
+  .cta-btn {
+    width: 100%;
+  }
+}

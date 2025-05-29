@@ -1,0 +1,101 @@
+
+
+/* body {
+  margin: 0;
+  font-family: 'Cairo', sans-serif;
+  background-color: #0e0c1a;
+} */
+
+.betting-section {
+  background: linear-gradient(135deg, #1b1a2d67, #2d293f9a);
+  width: 90%;
+  max-width: 1200px;
+  margin: 3rem auto;
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  color: #fdf6e3;
+  box-shadow: 0 8px 30px rgba(218, 165, 32, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+.betting-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(218, 165, 32, 0.25);
+}
+
+.section-title {
+  font-size: 2.25rem;
+  color: #ffd700;
+  margin-bottom: 1.2rem;
+  border-left: 6px solid #daa520;
+  padding-left: 1rem;
+  text-shadow: 1px 1px 4px rgba(255, 215, 0, 0.2);
+}
+
+.betting-text {
+  font-size: 1.125rem;
+  line-height: 1.9;
+  margin-bottom: 2rem;
+  color: #f8f8f2;
+}
+
+.betting-list,
+.betting-faq,
+.bonus-list {
+  list-style: none;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+}
+
+.betting-list li,
+.betting-faq li,
+.bonus-list li {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 1.05rem;
+}
+
+.betting-list li::before,
+.betting-faq li::before,
+.bonus-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #ffd700;
+  font-weight: bold;
+}
+
+.cta-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #facc15;
+  margin-top: 1.5rem;
+  text-align: center;
+  background: rgba(255, 215, 0, 0.1);
+  padding: 0.8rem;
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(218, 165, 32, 0.3);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.6rem;
+    padding-left: 0.75rem;
+  }
+
+  .betting-text {
+    font-size: 1rem;
+  }
+
+  .betting-list li,
+  .betting-faq li,
+  .bonus-list li {
+    font-size: 0.95rem;
+  }
+
+  .betting-section {
+    padding: 2rem 1rem;
+  }
+}

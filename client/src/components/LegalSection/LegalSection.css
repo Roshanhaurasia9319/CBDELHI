@@ -1,0 +1,133 @@
+.legal-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #2e1f2756, #3a3a3a);
+  padding: 3rem;
+  font-family: 'Segoe UI', sans-serif;
+  border-radius: 12px;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  gap: 2rem;
+}
+
+.text-content {
+  flex: 1 1 60%;
+  padding-right: 2rem;
+  color: white;
+}
+
+.legal-section h1 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #d72638;
+  text-shadow: 2px 2px 5px rgba(215, 38, 56, 0.2);
+  margin-bottom: 1.2rem;
+}
+
+.legal-section h1 span {
+  color: #f66c9b;
+}
+
+.legal-section a {
+  color: #1a73e8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.legal-section p {
+  font-size: 1.05rem;
+  margin: 1rem 0;
+  color: white;
+  line-height: 1.7;
+}
+
+.welcome {
+  font-weight: bold;
+}
+
+.betting-btn {
+  margin-top: 1.5rem;
+  background: linear-gradient(to right, #e60073, #ff66b2);
+  color: white;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.betting-btn:hover {
+  box-shadow: 0 0 15px rgba(255, 102, 178, 0.5);
+  transform: translateY(-2px);
+}
+
+.image-section {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+.image-section img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .legal-section {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .text-content, .image-section {
+    flex: 1 1 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .text-content {
+    padding-bottom: 2rem;
+  }
+
+  .legal-section h1 {
+    font-size: 2rem;
+  }
+
+  .legal-section p {
+    font-size: 1rem;
+  }
+
+  .betting-btn {
+    font-size: 0.95rem;
+    padding: 10px 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .legal-section {
+    padding: 1.5rem;
+  }
+
+  .legal-section h1 {
+    font-size: 1.6rem;
+  }
+
+  .legal-section p {
+    font-size: 0.95rem;
+  }
+
+  .image-section img {
+    width: 90%;
+  }
+
+  .betting-btn {
+    width: 100%;
+  }
+}

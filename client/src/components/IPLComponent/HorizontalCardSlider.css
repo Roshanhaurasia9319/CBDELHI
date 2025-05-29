@@ -1,0 +1,142 @@
+.slider-container {
+  margin: auto;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.slider-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: white;
+  margin-bottom: 30px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.slider-track-wrapper {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.slider-track {
+  display: flex;
+  gap: 24px;
+  padding: 20px;
+  width: max-content;
+  animation: scroll-left 70s linear infinite;
+  background: linear-gradient(145deg, #ffd9008a,#00d9ff8a ,#09ff008a, #6a0dad6e, #00000083); /* Shared gradient across slides */
+  border-radius: 20px;
+}
+
+.slider-card {
+  background: transparent; /* Let shared gradient show through */
+  padding: 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  width: 260px;
+  min-width: 260px;
+  flex-shrink: 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+  z-index: 0;
+}
+
+/* Golden ambient glow from behind */
+.slider-card::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140%;
+  height: 140%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.15) 0%, transparent 70%);
+  z-index: -1;
+  transition: opacity 0.4s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Content stays above the glow */
+.slider-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover effect */
+.slider-card:hover {
+  background: linear-gradient(145deg, #ffd700, #6a0dad, #000000); /* Individual gradient on hover */
+  transform: scale(1.07);
+  box-shadow: 0 0 40px rgba(255, 215, 0, 0.4); /* Golden glow */
+  z-index: 1;
+}
+
+.slider-card:hover::before {
+  opacity: 1; /* Show golden glow only on hover */
+}
+
+.site-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-position: center center;
+  margin-bottom: 15px;
+  background-color: white;
+}
+
+.site-name {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-shadow: 0 0 4px #ffd700;
+}
+
+.site-bonus {
+  color: #f7eaff;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Infinite scrolling animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .slider-card {
+    width: 220px;
+    min-width: 220px;
+  }
+}
+
+@media (max-width: 600px) {
+  .slider-title {
+    font-size: 1.6rem;
+  }
+
+  .slider-card {
+    width: 200px;
+    min-width: 200px;
+    padding: 16px;
+  }
+
+  .site-name {
+    font-size: 1.2rem;
+  }
+
+  .site-bonus {
+    font-size: 0.85rem;
+  }
+}
