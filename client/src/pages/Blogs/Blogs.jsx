@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import BlogCard from "../../components/BlogCard/BlogCard";
 import "./Blogs.css";
 import HorizontalCardSlider from "../../components/IPLComponent/HorizontalCardSlider";
+import {bettingSites, fantasyApps} from "../IPL/IPL"
 
 
 const blogs = [
@@ -73,8 +74,10 @@ const Blogs = () => {
           </div>
         ))}
 
-        <HorizontalCardSlider />
-
+        <HorizontalCardSlider bettingSites={bettingSites} bettingHeading = {"New Betting Sites"} />
+       
+        <HorizontalCardSlider bettingSites={fantasyApps} bettingHeading = {"New Fantasy Apps"} />
+        
         {selectedBlog && (
           <div className="modal">
             <div className='modal-div'

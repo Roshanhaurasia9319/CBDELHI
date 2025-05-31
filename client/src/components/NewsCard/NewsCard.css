@@ -3,6 +3,7 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #fff;
   margin-top: 50px;
+  cursor: pointer;
 }
 
 .card-grid h2 {

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './NewsCard.css';
 
 const cards = [
@@ -45,8 +46,10 @@ const cards = [
 ];
 
 const NewsCard = () => {
+  const navigate = useNavigate();
+
   return (
-    <section className="card-grid">
+    <section className="card-grid" onClick={() => navigate('/blogs')}>
       <h2>🏺 ICC World Cup 2023</h2>
       <div className="grid">
         {cards.map((card, index) => (

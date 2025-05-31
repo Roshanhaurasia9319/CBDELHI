@@ -6,27 +6,52 @@ import '../../App.css';
 
 const cards = [
   {
-    imgLink: "/images/dream11.jpg",
-    title: "Dream11",
-    offerBonus: "₹200 Cashback + 50% Bonus",
-    userRatings: 25032,
-    highlight: "25,000+ fantasy teams created today on Dream11",
+    imgLink: "/images/fun88.png",
+    title: "Fun88",
+    offerBonus: "200% Welcome Bonus on First Deposit",
+    userRatings: 6282,
+    highlight: " 655 people won In India on Fun88 yesterday",
+    link:"https://cbdelhi.in/betting/fun88/",
   },
   {
-    imgLink: "/images/fanFight.png",
-    title: "FanFight",
-    offerBonus: "₹150 Welcome Bonus",
-    userRatings: 10475,
-    highlight: "Over 12,000 fantasy matches played today on FanFight",
+    imgLink: "/images/vision11.jpg",
+    title: "Vision11",
+    offerBonus: "Get a Bonus of ₹100 on your first deposit",
+    userRatings: 2982,
+    highlight: "",
+    link:"https://www.vision11.in/",
   },
   {
-    imgLink: "/images/MyTeam11.jpg",
-    title: "MyTeam11",
-    offerBonus: "₹100 Bonus + 25% Cashback",
+    imgLink: "/images/ballebaazi.jpg",
+    title: "BalleBaazi",
+    offerBonus: "Get ₹50 bonus on your first deposit.",
     userRatings: 9871,
-    highlight: "More than 9,000 players joined leagues today on MyTeam11",
+    highlight: "",
+    link:"https://cbdelhi.in/betting/fun88/"
+  },
+  {
+    imgLink: "/images/my11circle.jpg",
+    title: "My11Circle",
+    offerBonus: "Download The App To Get ₹500 Bonus",
+    userRatings: 9871,
+    highlight: "",
+    link:"https://cbdelhi.in/betting/fun88/"
+  },
+  {
+    imgLink: "/images/myteam11.jpg",
+    title: "MyTeam11",
+    offerBonus: "Download Now to Get ₹100 Bonus",
+    userRatings: 9871,
+    highlight: "",
+    link:"https://cbdelhi.in/betting/fun88/"
   },
 ];
+
+
+
+
+
+
 
 const FantasyApp = () => {
   return (
@@ -40,6 +65,7 @@ const FantasyApp = () => {
           offerBonus={card.offerBonus}
           highlight={card.highlight}
           imgLink={card.imgLink}
+          redirectLink = {card.link}
         />
       ))}
         <LegalSection />

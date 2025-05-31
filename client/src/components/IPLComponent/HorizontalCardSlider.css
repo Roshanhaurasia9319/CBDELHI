@@ -1,10 +1,13 @@
 .slider-container {
   margin: auto;
+  margin-top: 60px;
+  margin-bottom: 80px;
   color: #fff;
   overflow: hidden;
   position: relative;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 
 .slider-title {
   text-align: center;

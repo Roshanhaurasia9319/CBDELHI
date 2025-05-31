@@ -4,6 +4,9 @@ import BettingTable from "../../components/BettingSite/BettingTable";
 import BettingSlider from "../../components/BettingSite/BettingSlider";
 import Feedback from "../../components/Feedback/Feedback";
 import './BettingSites.css';
+import Card from "../../components/Cards/Card"
+import { cards } from "../Home/Home"
+
 
 const BettingSites = () => {
   return (
@@ -52,6 +55,10 @@ const BettingSites = () => {
           </div>
         </div>
       </section>
+
+       {cards.map((card, index) => (
+                <Card key={index} title={card.title} offerBonus={card.offerBonus} highlight={card.highlight} imgLink={card.imgLink} redirectLink = {card.redirectLink} />
+            ))}
 
       <BettingTable />
       <Feedback />
