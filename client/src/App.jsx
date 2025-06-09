@@ -14,6 +14,7 @@ import IPL from './pages/IPL/IPL';
 import CasinoGameApp from './pages/CasinoGameApp/CasinoGameApp';
 import FantasyApp from './pages/FantasyApp/FantasyApp';
 import BettingApp from './pages/BettingApp/BettingApp';
+import TermsAndConditions from './pages/TermsAndConditions/TermsAndConditions'
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
             <Route element={ <FantasyApp /> } path='/fantasyApp' />
             <Route element={ <BettingApp />} path='/bettingApp' />
             <Route element={ <CasinoGameApp />} path='/casinoGameApp' />
+            <Route element={ <TermsAndConditions/> } path='/TermsAndConditions' />
           </Routes>
           
           <Footer />

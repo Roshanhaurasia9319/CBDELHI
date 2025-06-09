@@ -127,9 +127,10 @@ body {
 .footer-subscribe {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 20px;
   z-index: 3;
   position: relative;
+  margin-bottom: 20px;
 }
 
 .footer-form {

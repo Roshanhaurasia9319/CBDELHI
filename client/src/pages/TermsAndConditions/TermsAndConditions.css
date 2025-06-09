@@ -1,0 +1,85 @@
+/* Egyptian Gradient Background and Fonts */
+
+.terms-container {
+  max-width: 800px;
+  margin: auto;
+  margin-top: 150px;
+  margin-bottom: 30px;
+  padding: 25px;
+  background: linear-gradient(to bottom, #000000, #1a002b);
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.2);
+  color: #f5d76e;
+  animation: fadeIn 1s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.terms-container h1 {
+  font-size: 36px;
+  color: #ffd700; /* Golden */
+  margin-bottom: 10px;
+  text-align: center;
+  border-bottom: 2px solid #800080;
+  padding-bottom: 10px;
+}
+
+.effective-date {
+  font-size: 14px;
+  color: #a078c3;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.terms-container section {
+  margin-bottom: 30px;
+  background-color: rgba(255, 255, 255, 0.02);
+  padding: 15px;
+  border-left: 4px solid #800080;
+  border-radius: 6px;
+}
+
+.terms-container h2 {
+  font-size: 22px;
+  color: #d4af37;
+  margin-bottom: 8px;
+}
+
+.terms-container p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #f9f3d2;
+}
+
+.closing-text {
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 40px;
+  color: #ffd700;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .terms-container {
+    margin-top: 180px;
+    padding: 15px;
+  }
+
+  .terms-container h1 {
+    font-size: 28px;
+  }
+
+  .terms-container h2 {
+    font-size: 18px;
+  }
+
+  .terms-container p {
+    font-size: 15px;
+  }
+}
